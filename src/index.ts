@@ -81,10 +81,10 @@ class Captcha {
   img!: HTMLImageElement
   width: number
   height: number
-  imgSrc: string
-  onSuccess: Noop
-  onFail: Noop
-  onRefresh: Noop
+  imgSrc!: string
+  onSuccess!: Noop
+  onFail!: Noop
+  onRefresh!: Noop
 
   constructor(options: CanvasEngineProps) {
     const { el, width = w, height = h, imgSrc, onSuccess, onFail, onRefresh } = options
@@ -96,10 +96,10 @@ class Captcha {
     this.width = width
     this.height = height
     this.el = el
-    this.imgSrc = imgSrc
-    this.onSuccess = onSuccess
-    this.onFail = onFail
-    this.onRefresh = onRefresh
+    imgSrc && (this.imgSrc = imgSrc)
+    onSuccess && (this.onSuccess = onSuccess)
+    onFail && (this.onFail = onFail)
+    onRefresh && (this.onRefresh = onRefresh)
   }
 
   init() {
@@ -314,6 +314,6 @@ class Captcha {
   }
 }
 
-export function init(opts: CanvasEngineProps) {
+export function captcha(opts: CanvasEngineProps) {
   return new Captcha(opts).init()
 }
