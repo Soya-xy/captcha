@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>滑动拼图验证码</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
     <style>
       .container {
         width: 310px;
@@ -42,21 +44,11 @@
       <div id="captcha"></div>
       <div id="msg"></div>
     </div>
+    <script type="module">
+      import { init } from '/src'
+      init({
+        el: document.getElementById('captcha'),
+      })
+    </script>
   </body>
 </html>
-
-<script type="module">
-  import { init } from './dist/index.mjs'
-  init({
-    el: document.getElementById('captcha'),
-    imgSrc: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/logo.jpeg',
-    onSuccess() {
-      document.getElementById('msg').innerHTML = '登录成功！'
-    },
-    onFail: cleanMsg,
-    onRefresh: cleanMsg,
-  })
-  function cleanMsg() {
-    document.getElementById('msg').innerHTML = ''
-  }
-</script>

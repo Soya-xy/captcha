@@ -1,5 +1,5 @@
 import type { CanvasEngineProps, Mouse, Noop } from './type'
-import styles from './index.css'
+import styles from './index.module.css'
 
 const w = 310 // canvas宽度
 const h = 155 // canvas高度
@@ -24,20 +24,14 @@ function createCanvas(width: number, height: number) {
 }
 
 function addClass(element: HTMLElement, className: string) {
-  console.log(typeof styles)
-
   element.classList.add(styles[className])
 }
 
 function setClass(element: HTMLElement, className: string) {
-  console.log(typeof styles)
-
   element.className = styles[className]
 }
 
 function removeClass(element: HTMLElement, className: string) {
-  console.log(styles[className])
-
   element.classList.remove(styles[className])
 }
 
@@ -93,7 +87,7 @@ class Captcha {
   onRefresh: Noop
 
   constructor(options: CanvasEngineProps) {
-    const { el, width, height, imgSrc, onSuccess, onFail, onRefresh } = options
+    const { el, width = w, height = h, imgSrc, onSuccess, onFail, onRefresh } = options
     Object.assign(el.style, {
       position: 'relative',
       width: `${width}px`,
@@ -182,6 +176,8 @@ class Captcha {
 
   createImg(onload: ((this: GlobalEventHandlers, ev: Event) => any) | null, localSrc = '') {
     const img = new Image()
+    img.crossOrigin = 'Anonymous'
+
     img.onload = onload
     img.src = this.getRandomImgSrc(localSrc)
     img.onerror = () => {

@@ -1,4 +1,4 @@
-export type Noop = () => {}
+export type Noop = () => void
 export type Mouse = MouseEvent | TouchEvent
 export interface Size {
   w: number

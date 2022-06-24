@@ -1,3 +1,4 @@
+
 .block {
   position: absolute;
   left: 0;
@@ -108,7 +109,7 @@
   left: 13px;
   width: 14px;
   height: 12px;
-  background: url(/images/icon.png) 0 -13px;
+  background: url(./images/icon.png) 0 -13px;
   background-size: 32px 544px;
 }
 
@@ -123,7 +124,7 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background: url(/images/icon.png) 0 -233px;
+  background: url(./images/icon.png) 0 -233px;
   background-size: 32px 544px;
 }
 
@@ -151,7 +152,7 @@
   width: 32px;
   height: 32px;
   margin-bottom: 10px;
-  background: url(/images/icon.png) 0 -332px;
+  background: url(./images/icon.png) 0 -332px;
   background-size: 32px 544px;
   animation: loading-icon-rotate 0.8s linear infinite;
 }
