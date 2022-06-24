@@ -1,7 +1,7 @@
 {
   "name": "@ldzn/js-captcha",
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Soya <soya@xiaoyio.com>",
@@ -20,13 +20,13 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "require": "./dist/js-captcha.umd.js",
-      "import": "./dist/js-captcha.es.js"
+      "require": "./dist/index.umd.js",
+      "import": "./dist/index.es.js"
     },
     "./style.css": "./dist/style.css"
   },
-  "main": "dist/js-captcha.umd.js",
-  "module": "dist/js-captcha.es.js",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
