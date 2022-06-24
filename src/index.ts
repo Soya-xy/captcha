@@ -310,7 +310,7 @@ class Captcha {
 
     // 重新加载图片
     this.setLoading(true)
-    this.img.src = this.getRandomImgSrc()
+    this.img.src = this.getRandomImgSrc(this.imgSrc)
   }
 }
 
