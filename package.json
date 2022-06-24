@@ -1,7 +1,7 @@
 {
   "name": "@ldzn/js-captcha",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Soya <soya@xiaoyio.com>",
@@ -46,9 +46,6 @@
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@ldzn/js-captcha": "workspace:^0.0.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.1",
