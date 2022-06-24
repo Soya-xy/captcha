@@ -1,7 +1,7 @@
 {
-  "name": "captcha",
+  "name": "@ldzn/js-captcha",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Soya <soya@xiaoyio.com>",
@@ -15,7 +15,7 @@
   "keywords": [
     "captcha",
     "javascript",
-    "solid-captcha"
+    "slide-captcha"
   ],
   "sideEffects": false,
   "exports": {
@@ -35,7 +35,9 @@
       ]
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
