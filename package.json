@@ -1,7 +1,7 @@
 {
   "name": "@ldzn/js-captcha",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Soya <soya@xiaoyio.com>",
@@ -21,11 +21,11 @@
   "exports": {
     ".": {
       "require": "./dist/js-captcha.umd.js",
-      "import": "./dist/js-captcha.mjs"
+      "import": "./dist/js-captcha.es.js"
     }
   },
   "main": "./dist/js-captcha.umd.js",
-  "module": "./dist/js-captcha.mjs",
+  "module": "./dist/js-captcha.es.js",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -54,7 +54,9 @@
     "bumpp": "^8.2.1",
     "eslint": "^8.18.0",
     "pnpm": "^7.2.1",
+    "rollup-plugin-typescript2": "^0.32.1",
     "typescript": "^4.7.4",
-    "vite": "^2.9.12"
+    "vite": "^2.9.12",
+    "vite-plugin-dts": "^1.2.0"
   }
 }
