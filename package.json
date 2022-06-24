@@ -1,7 +1,7 @@
 {
   "name": "@ldzn/js-captcha",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Soya <soya@xiaoyio.com>",
@@ -20,12 +20,12 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "require": "./dist/my-lib.umd.js",
-      "import": "./dist/my-lib.mjs"
+      "require": "./dist/js-captcha.umd.js",
+      "import": "./dist/js-captcha.mjs"
     }
   },
-  "main": "./dist/my-lib.umd.js",
-  "module": "./dist/my-lib.mjs",
+  "main": "./dist/js-captcha.umd.js",
+  "module": "./dist/js-captcha.mjs",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -46,6 +46,9 @@
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ldzn/js-captcha": "workspace:^0.0.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.1",
