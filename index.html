@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>滑动拼图验证码</title>
+    <style>
+      .container {
+        width: 310px;
+        margin: 100px auto;
+      }
+      input {
+        display: block;
+        width: 290px;
+        line-height: 40px;
+        margin: 10px 0;
+        padding: 0 10px;
+        outline: none;
+        border: 1px solid #c8cccf;
+        border-radius: 4px;
+        color: #6a6f77;
+      }
+      #msg {
+        width: 100%;
+        line-height: 40px;
+        font-size: 14px;
+        text-align: center;
+      }
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        margin-left: 100px;
+        color: #0366d6;
+      }
+    </style>
+  </head>
+  <body>
+    <h3><a href="https://github.com/yeild/jigsaw">返回GitHub</a></h3>
+    <div class="container">
+      <input value="admin" readonly />
+      <input type="password" value="1234567890" readonly />
+      <div id="captcha"></div>
+      <div id="msg"></div>
+    </div>
+  </body>
+</html>
+
+<script type="module">
+  import { init } from './dist/index.mjs'
+  init({
+    el: document.getElementById('captcha'),
+    imgSrc: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/logo.jpeg',
+    onSuccess() {
+      document.getElementById('msg').innerHTML = '登录成功！'
+    },
+    onFail: cleanMsg,
+    onRefresh: cleanMsg,
+  })
+  function cleanMsg() {
+    document.getElementById('msg').innerHTML = ''
+  }
+</script>
