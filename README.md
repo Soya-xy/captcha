@@ -9,6 +9,14 @@ This project was reconstructed into TypeScript based on [jigsaw](https://github.
 - Randomly select network pictures from [picsum.photos](https://picsum.photos)
 
 ## Use
+install captcha
+```bash
+npm install @ldzn/js-captcha
+# or
+yarn add @ldzn/js-captcha
+# or
+pnpm install @ldzn/js-captcha
+```
 
 import captcha 
 
