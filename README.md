@@ -24,7 +24,7 @@ import captcha
 import { captcha } from '@ldzn/js-captcha'
 captcha({
   el: DOM,
-  widht: 100,
+  width: 100,
   height: 100,
   imgSrc:'',
   onSuccess() {
